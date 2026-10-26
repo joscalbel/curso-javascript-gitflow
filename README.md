@@ -28,21 +28,31 @@ git add index.html
 git commit -m "usuari 1: afegida estructura inicial i capçalera del projecte"
 git push origin main
 git push origin develop
+```
+## Feature Contingut HTML
+```bash
 git checkout -b feature/contingutHTML develop
 git commit -m "usuari 2: implementada la seccio de modificar contingut HTML"
 git checkout develop
 git merge feature/contingutHTML
-
+```
+## Feature Atributs HTML
+```bash
 git checkout -b feature/atributsHTML develop
 git commit -m "usuari 2: implementada la seccio de modificar atributs HTML"
 git checkout develop
 git merge feature/atributsHTML
-
+```
+## Feature Estils CSS
+```bash
 git checkout -b feature/estilsCSS develop
 git commit -m "usuari 3: afegida la seccio de modificar estils CSS"
 git checkout develop
 git merge feature/estilsCSS
 git push origin develop
+```
+## Gestió de Versions i Release (Usuari 3)
+```bash
 git checkout -b release/v1.0 develop
 git checkout main
 git merge release/v1.0
@@ -50,6 +60,9 @@ git tag v1.0
 git checkout develop
 git merge release/v1.0
 git push origin main develop --tags
+```
+## Manteniment i Hotfix (Usuari 1)
+```bash
 git checkout main
 git checkout -b hotfix/milloresV_1_0
 git commit -m "usuari 1: millores aplicades a la seccio de contingut HTML (hotfix)"
