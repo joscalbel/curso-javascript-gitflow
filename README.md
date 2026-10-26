@@ -29,6 +29,7 @@ git commit -m "usuari 1: afegida estructura inicial i capçalera del projecte"
 git push origin main
 git push origin develop
 ```
+![](./capturas/Paso 1.01.png)
 ## Feature Contingut HTML
 ```bash
 git checkout -b feature/contingutHTML develop
