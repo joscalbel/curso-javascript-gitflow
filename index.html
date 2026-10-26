@@ -1,11 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="ca">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Actividad - GitFlow</title>
+    <title>Curs JavaScript - Git Flow</title>
   </head>
   <body>
+    <!-- Capçalera i Navegació (Usuari 1) -->
     <header>
       <h1>Projecte JavaScript & Git Flow</h1>
       <nav>
@@ -17,11 +18,13 @@
         </ul>
       </nav>
     </header>
+
     <main>
       <section id="home">
         <h2>Inici</h2>
         <p>Benvinguts al projecte de pràctiques.</p>
       </section>
+
       <!-- SECCIÓ USUARI 2: Modificar Contingut HTML -->
       <section id="contingut">
         <h2>Secció: Modificar Contingut HTML</h2>
@@ -42,31 +45,52 @@
         <button id="btn-canviar-atribut">Canviar Imatge / Atribut</button>
       </section>
 
-      <!-- Codi JavaScript de les Features -->
-      <script>
-        // --- CÒDIG USUARI 2: Modificar Contingut HTML ---
-        const btnText = document.getElementById("btn-canviar-text");
-        const paragraf = document.getElementById("paragraf-text");
-
-        btnText.addEventListener("click", function () {
-          // Modificant el text/HTML del element
-          paragraf.innerHTML =
-            "<strong>¡Contingut modificat amb èxit!</strong> Usant innerHTML amb JavaScript.";
-        });
-
-        // --- CÒDIG USUARI 2: Modificar Atributs HTML ---
-        const btnAtribut = document.getElementById("btn-canviar-atribut");
-        const imatge = document.getElementById("imatge-exemple");
-
-        btnAtribut.addEventListener("click", function () {
-          // Modificant l'atribut 'src' i 'alt' de la imatge
-          imatge.setAttribute("src", "https://via.placeholder.com/250/ff0000");
-          imatge.setAttribute("alt", "Imatge modificada per JavaScript");
-        });
-      </script>
+      <!-- SECCIÓ USUARI 3: Modificar Estils CSS -->
+      <section id="estils">
+        <h2>Secció: Modificar Estils CSS</h2>
+        <p id="text-estils">
+          Aquest text canviarà de color i estil amb JavaScript.
+        </p>
+        <button id="btn-canviar-estils">Modificar Estils</button>
+      </section>
     </main>
+
+    <!-- Footer (Usuari 1) -->
     <footer>
       <p>&copy; 2026 Curs de JavaScript</p>
     </footer>
+
+    <!-- Codi JavaScript de les Features -->
+    <script>
+      // --- CÒDIG USUARI 2: Modificar Contingut HTML ---
+      const btnText = document.getElementById("btn-canviar-text");
+      const paragraf = document.getElementById("paragraf-text");
+
+      btnText.addEventListener("click", function () {
+        paragraf.innerHTML =
+          "<strong>¡Contingut modificat amb èxit!</strong> Usant innerHTML amb JavaScript.";
+      });
+
+      // --- CÒDIG USUARI 2: Modificar Atributs HTML ---
+      const btnAtribut = document.getElementById("btn-canviar-atribut");
+      const imatge = document.getElementById("imatge-exemple");
+
+      btnAtribut.addEventListener("click", function () {
+        imatge.setAttribute("src", "https://via.placeholder.com/250/ff0000");
+        imatge.setAttribute("alt", "Imatge modificada per JavaScript");
+      });
+
+      // --- CÒDIG USUARI 3: Modificar Estils CSS ---
+      const btnEstils = document.getElementById("btn-canviar-estils");
+      const textEstils = document.getElementById("text-estils");
+
+      btnEstils.addEventListener("click", function () {
+        textEstils.style.color = "blue";
+        textEstils.style.fontSize = "20px";
+        textEstils.style.fontWeight = "bold";
+        textEstils.style.backgroundColor = "#f0f0f0";
+        textEstils.style.padding = "10px";
+      });
+    </script>
   </body>
 </html>
