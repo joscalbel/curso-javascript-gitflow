@@ -6,14 +6,67 @@
     <title>Actividad - GitFlow</title>
   </head>
   <body>
-    <aside>
+    <header>
+      <h1>Projecte JavaScript & Git Flow</h1>
       <nav>
-        <a href="#index.html">Home</a>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#contingut">Contingut HTML</a></li>
+          <li><a href="#atributs">Atributs HTML</a></li>
+          <li><a href="#estils">Estils CSS</a></li>
+        </ul>
       </nav>
-    </aside>
-    <div class="container">
-      <h3>Creado por Usuario 1</h3>
-    </div>
-    <footer></footer>
+    </header>
+    <main>
+      <section id="home">
+        <h2>Inici</h2>
+        <p>Benvinguts al projecte de pràctiques.</p>
+      </section>
+      <!-- SECCIÓ USUARI 2: Modificar Contingut HTML -->
+      <section id="contingut">
+        <h2>Secció: Modificar Contingut HTML</h2>
+        <p id="paragraf-text">
+          Aquest text original serà modificat per JavaScript.
+        </p>
+        <button id="btn-canviar-text">Canviar Contingut</button>
+      </section>
+
+      <!-- SECCIÓ USUARI 2: Modificar Atributs HTML -->
+      <section id="atributs">
+        <h2>Secció: Modificar Atributs HTML</h2>
+        <img
+          id="imatge-exemple"
+          src="https://via.placeholder.com/150"
+          alt="Imatge de mostra"
+        />
+        <button id="btn-canviar-atribut">Canviar Imatge / Atribut</button>
+      </section>
+
+      <!-- Codi JavaScript de les Features -->
+      <script>
+        // --- CÒDIG USUARI 2: Modificar Contingut HTML ---
+        const btnText = document.getElementById("btn-canviar-text");
+        const paragraf = document.getElementById("paragraf-text");
+
+        btnText.addEventListener("click", function () {
+          // Modificant el text/HTML del element
+          paragraf.innerHTML =
+            "<strong>¡Contingut modificat amb èxit!</strong> Usant innerHTML amb JavaScript.";
+        });
+
+        // --- CÒDIG USUARI 2: Modificar Atributs HTML ---
+        const btnAtribut = document.getElementById("btn-canviar-atribut");
+        const imatge = document.getElementById("imatge-exemple");
+
+        btnAtribut.addEventListener("click", function () {
+          // Modificant l'atribut 'src' i 'alt' de la imatge
+          imatge.setAttribute("src", "https://via.placeholder.com/250/ff0000");
+          imatge.setAttribute("alt", "Imatge modificada per JavaScript");
+        });
+      </script>
+    </main>
+    <footer>
+      <p>&copy; 2026 Curs de JavaScript</p>
+    </footer>
   </body>
 </html>
